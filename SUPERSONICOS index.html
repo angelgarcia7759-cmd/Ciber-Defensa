@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Ciberseguridad Interactiva</title>
+    <!-- Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#0f172a',
+                            panel: '#1e293b',
+                            accent: '#10b981',
+                            accentHover: '#059669',
+                            danger: '#ef4444'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Transiciones suaves */
+        .transition-all { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-cyber-dark text-slate-300 min-h-screen">
+
+    <!-- Encabezado -->
+    <header class="bg-cyber-panel border-b border-slate-700 p-6 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-cyber-accent"></i> 
+                Ciber<span class="text-cyber-accent">Defensa</span>
+            </h1>
+            <nav class="mt-4 md:mt-0 space-x-4 text-sm font-medium">
+                <a href="#conceptos" class="hover:text-cyber-accent transition-colors">Conceptos</a>
+                <a href="#ejercicios" class="hover:text-cyber-accent transition-colors">Ejercicios</a>
+                <a href="#fuentes" class="hover:text-cyber-accent transition-colors">Fuentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Protege tu Identidad Digital</h2>
+        <p class="text-lg md:text-xl text-slate-400 mb-8">
+            En un mundo hiperconectado, la ciberseguridad ya no es opcional, es una necesidad. Aprende a identificar amenazas y proteger tus datos personales con nuestros ejercicios interactivos.
+        </p>
+        <a href="#ejercicios" class="inline-block bg-cyber-accent hover:bg-cyber-accentHover text-white font-bold py-3 px-8 rounded-full transition-all shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+            Empezar Ejercicios <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+    </section>
+
+    <!-- Conceptos Básicos -->
+    <section id="conceptos" class="py-16 bg-slate-900/50 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold text-white mb-10 text-center">Amenazas Comunes</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-red-500/20 rounded-full flex items-center justify-center mb-4 border border-red-500/50">
+                        <i class="fa-solid fa-fish text-red-400 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Phishing</h4>
+                    <p class="text-slate-400 text-sm">
+                        Los atacantes se hacen pasar por entidades de confianza (bancos, servicios) a través de correos o mensajes para robar tus contraseñas y datos bancarios.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4 border border-purple-500/50">
+                        <i class="fa-solid fa-bug text-purple-400 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Malware & Ransomware</h4>
+                    <p class="text-slate-400 text-sm">
+                        Software malicioso diseñado para dañar tu sistema o secuestrar tus archivos (encriptándolos) exigiendo un rescate económico para recuperarlos.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="glass-panel p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-12 w-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-4 border border-yellow-500/50">
+                        <i class="fa-solid fa-key text-yellow-400 text-xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Fuerza Bruta</h4>
+                    <p class="text-slate-400 text-sm">
+                        Uso de programas automatizados que prueban miles de combinaciones de contraseñas por segundo hasta adivinar la tuya. Por eso necesitas claves fuertes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Interactiva -->
+    <section id="ejercicios" class="py-16 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-bold text-white mb-4 text-center">Zona Interactiva</h3>
+        <p class="text-center text-slate-400 mb-12">Pon a prueba tus conocimientos con estas herramientas prácticas.</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Ejercicio 1: Medidor de Contraseñas -->
+            <div class="glass-panel rounded-2xl p-8">
+                <h4 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-unlock-keyhole text-cyber-accent"></i> Medidor de Contraseñas
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">Descubre cuánto tiempo tardaría un hacker en descifrar tu contraseña. <em>(Nota: No guardamos nada de lo que escribes aquí).</em></p>
+                
+                <div class="relative mb-4">
+                    <input type="text" id="passwordInput" placeholder="Escribe una contraseña de prueba..." 
+                           class="w-full bg-slate-800 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyber-accent focus:ring-1 focus:ring-cyber-accent transition-colors">
+                    <button id="togglePwd" class="absolute right-3 top-3.5 text-slate-400 hover:text-white">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Barra de fuerza -->
+                <div class="w-full bg-slate-700 rounded-full h-2.5 mb-2">
+                    <div id="strengthBar" class="bg-red-500 h-2.5 rounded-full w-0 transition-all duration-500"></div>
+                </div>
+                
+                <div class="flex justify-between items-center mb-6">
+                    <span id="strengthText" class="text-sm font-bold text-red-500">Muy Débil</span>
+                    <span id="timeToCrack" class="text-xs text-slate-400">Tiempo estimado: Instante</span>
+                </div>
+
+                <ul class="text-sm space-y-2 text-slate-400">
+                    <li id="req-length" class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-500 w-4"></i> Más de 8 caracteres (ideal 12+)</li>
+                    <li id="req-upper" class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-500 w-4"></i> Letras mayúsculas y minúsculas</li>
+                    <li id="req-num" class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-500 w-4"></i> Al menos un número</li>
+                    <li id="req-sym" class="flex items-center gap-2"><i class="fa-solid fa-xmark text-red-500 w-4"></i> Al menos un símbolo (!@#$%^&*)</li>
+                </ul>
+            </div>
+
+            <!-- Ejercicio 2: Simulador de Phishing -->
+            <div class="glass-panel rounded-2xl p-8 flex flex-col">
+                <h4 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-envelope-open-text text-blue-400"></i> Detector de Phishing
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">Analiza el siguiente escenario y decide si es seguro o es un intento de estafa.</p>
+
+                <!-- Contenedor del Quiz -->
+                <div id="quizContainer" class="flex-grow flex flex-col justify-center">
+                    <div class="bg-slate-800 border border-slate-600 rounded-lg p-5 mb-6 relative">
+                        <div class="flex items-center gap-3 mb-3 border-b border-slate-700 pb-3">
+                            <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-user text-slate-400"></i>
+                            </div>
+                            <div>
+                                <p id="quizSender" class="text-sm font-bold text-white">Soporte Netflix &lt;admin@netflix-soporte-update.com&gt;</p>
+                                <p id="quizSubject" class="text-xs text-slate-400">Asunto: Tu cuenta ha sido suspendida</p>
+                            </div>
+                        </div>
+                        <p id="quizBody" class="text-sm text-slate-300">
+                            Estimado usuario,<br><br>Hemos detectado actividad inusual. Tu cuenta se suspenderá en 24 horas si no verificas tus datos de facturación en el siguiente enlace:<br><br>
+                            <a href="#" class="text-blue-400 underline" onclick="event.preventDefault();">http://verificar-netflix-pago.com/login</a>
+                        </p>
+                    </div>
+
+                    <div id="quizButtons" class="flex gap-4">
+                        <button onclick="answerQuiz(true)" class="flex-1 bg-red-500/10 hover:bg-red-500/20 text-red-500 border border-red-500/50 py-2 rounded-lg font-bold transition-colors">
+                            <i class="fa-solid fa-triangle-exclamation mr-1"></i> Es Phishing
+                        </button>
+                        <button onclick="answerQuiz(false)" class="flex-1 bg-cyber-accent/10 hover:bg-cyber-accent/20 text-cyber-accent border border-cyber-accent/50 py-2 rounded-lg font-bold transition-colors">
+                            <i class="fa-solid fa-check-circle mr-1"></i> Es Legítimo
+                        </button>
+                    </div>
+
+                    <!-- Feedback del Quiz -->
+                    <div id="quizFeedback" class="hidden mt-4 p-4 rounded-lg">
+                        <h5 id="feedbackTitle" class="font-bold text-lg mb-1"></h5>
+                        <p id="feedbackText" class="text-sm"></p>
+                        <button onclick="nextQuiz()" class="mt-4 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded text-sm transition-colors">Siguiente Caso</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Fuentes -->
+    <section id="fuentes" class="py-16 bg-slate-900/80 px-6 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-white mb-6"><i class="fa-solid fa-book-open text-cyber-accent mr-2"></i> Fuentes y Referencias Oficiales</h3>
+            <p class="text-slate-400 mb-8 text-sm md:text-base">
+                La información y mejores prácticas mostradas en esta página están basadas en directrices de las principales agencias de ciberseguridad a nivel mundial:
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://www.incibe.es/" target="_blank" class="bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg border border-slate-700 transition-colors text-left flex items-center gap-4">
+                    <div class="text-blue-400 text-2xl"><i class="fa-solid fa-building-shield"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold">INCIBE</h4>
+                        <p class="text-xs text-slate-400">Instituto Nacional de Ciberseguridad (España)</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.cisa.gov/" target="_blank" class="bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg border border-slate-700 transition-colors text-left flex items-center gap-4">
+                    <div class="text-blue-400 text-2xl"><i class="fa-solid fa-globe"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold">CISA</h4>
+                        <p class="text-xs text-slate-400">Cybersecurity & Infrastructure Security Agency (EEUU)</p>
+                    </div>
+                </a>
+
+                <a href="https://owasp.org/" target="_blank" class="bg-slate-800 hover:bg-slate-700 px-6 py-4 rounded-lg border border-slate-700 transition-colors text-left flex items-center gap-4">
+                    <div class="text-blue-400 text-2xl"><i class="fa-solid fa-code"></i></div>
+                    <div>
+                        <h4 class="text-white font-bold">OWASP</h4>
+                        <p class="text-xs text-slate-400">Open Web Application Security Project</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyber-panel py-6 text-center border-t border-slate-800">
+        <p class="text-slate-500 text-sm">
+            © 2024 Portal de CiberDefensa. Proyecto educativo de simulación. <br>
+            <span class="text-xs mt-2 inline-block">Nunca compartas tus contraseñas reales en sitios no oficiales.</span>
+        </p>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+        // ==========================================
+        // LÓGICA 1: MEDIDOR DE CONTRASEÑAS
+        // ==========================================
+        const pwdInput = document.getElementById('passwordInput');
+        const toggleBtn = document.getElementById('togglePwd');
+        const strengthBar = document.getElementById('strengthBar');
+        const strengthText = document.getElementById('strengthText');
+        const timeToCrack = document.getElementById('timeToCrack');
+
+        // Requisitos UI
+        const reqLen = document.getElementById('req-length');
+        const reqUp = document.getElementById('req-upper');
+        const reqNum = document.getElementById('req-num');
+        const reqSym = document.getElementById('req-sym');
+
+        // Mostrar/Ocultar contraseña
+        toggleBtn.addEventListener('click', () => {
+            const type = pwdInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            pwdInput.setAttribute('type', type);
+            toggleBtn.innerHTML = type === 'password' ? '<i class="fa-solid fa-eye"></i>' : '<i class="fa-solid fa-eye-slash"></i>';
+        });
+
+        pwdInput.addEventListener('input', () => {
+            const val = pwdInput.value;
+            let score = 0;
+
+            // Validaciones booleanas
+            const hasLen = val.length >= 8;
+            const hasUpper = /[A-Z]/.test(val) && /[a-z]/.test(val);
+            const hasNum = /[0-9]/.test(val);
+            const hasSym = /[^A-Za-z0-9]/.test(val);
+
+            // Actualizar checks de la UI
+            updateCheckUI(reqLen, hasLen);
+            updateCheckUI(reqUp, hasUpper);
+            updateCheckUI(reqNum, hasNum);
+            updateCheckUI(reqSym, hasSym);
+
+            // Calcular score
+            if(val.length > 0) score += 1; // Al menos algo
+            if(hasLen) score += 1;
+            if(val.length >= 12) score += 1;
+            if(hasUpper) score += 1;
+            if(hasNum) score += 1;
+            if(hasSym) score += 1;
+
+            // Calcular entropía básica para "tiempo de crackeo" (Simulación aproximada)
+            let charSet = 0;
+            if (/[a-z]/.test(val)) charSet += 26;
+            if (/[A-Z]/.test(val)) charSet += 26;
+            if (hasNum) charSet += 10;
+            if (hasSym) charSet += 32;
+
+            let timeStr = "Instante";
+            if(val.length > 0) {
+                const combinations = Math.pow(charSet, val.length);
+                // Asumimos 100 mil millones de intentos por segundo (hardware moderno)
+                const seconds = combinations / 100000000000; 
+
+                if (seconds < 60) timeStr = "Instante / Segundos";
+                else if (seconds < 3600) timeStr = "Minutos";
+                else if (seconds < 86400) timeStr = "Horas";
+                else if (seconds < 31536000) timeStr = "Días / Meses";
+                else if (seconds < 3153600000) timeStr = "Años";
+                else timeStr = "Siglos";
+            }
+
+            timeToCrack.innerText = val.length === 0 ? "Tiempo estimado: Instante" : `Tiempo estimado: ${timeStr}`;
+
+            // Actualizar barra visual
+            if (val.length === 0) {
+                strengthBar.style.width = '0%';
+                strengthBar.className = 'h-2.5 rounded-full w-0 transition-all duration-500 bg-red-500';
+                strengthText.innerText = 'Muy Débil';
+                strengthText.className = 'text-sm font-bold text-red-500';
+            } else if (score <= 2) {
+                strengthBar.style.width = '25%';
+                strengthBar.className = 'h-2.5 rounded-full transition-all duration-500 bg-red-500';
+                strengthText.innerText = 'Débil';
+                strengthText.className = 'text-sm font-bold text-red-500';
+            } else if (score <= 4) {
+                strengthBar.style.width = '60%';
+                strengthBar.className = 'h-2.5 rounded-full transition-all duration-500 bg-yellow-500';
+                strengthText.innerText = 'Aceptable';
+                strengthText.className = 'text-sm font-bold text-yellow-500';
+            } else {
+                strengthBar.style.width = '100%';
+                strengthBar.className = 'h-2.5 rounded-full transition-all duration-500 bg-cyber-accent';
+                strengthText.innerText = 'Fuerte';
+                strengthText.className = 'text-sm font-bold text-cyber-accent';
+            }
+        });
+
+        function updateCheckUI(element, isValid) {
+            const icon = element.querySelector('i');
+            if (isValid) {
+                icon.className = 'fa-solid fa-check text-cyber-accent w-4';
+                element.classList.replace('text-slate-400', 'text-white');
+            } else {
+                icon.className = 'fa-solid fa-xmark text-red-500 w-4';
+                element.classList.replace('text-white', 'text-slate-400');
+            }
+        }
+
+        // ==========================================
+        // LÓGICA 2: SIMULADOR DE PHISHING
+        // ==========================================
+        const quizData = [
+            {
+                sender: "Soporte Netflix &lt;admin@netflix-soporte-update.com&gt;",
+                subject: "Asunto: Tu cuenta ha sido suspendida",
+                body: "Estimado usuario,<br><br>Hemos detectado actividad inusual. Tu cuenta se suspenderá en 24 horas si no verificas tus datos de facturación en el siguiente enlace:<br><br><a href='#' class='text-blue-400 underline' onclick='event.preventDefault();'>http://verificar-netflix-pago.com/login</a>",
+                isPhishing: true,
+                explanation: "Observa el remitente y el enlace. Netflix oficial usaría '@netflix.com'. Además, los estafadores crean sentido de urgencia ('en 24 horas') e incluyen enlaces con HTTP (sin 's' de seguridad) o dominios extraños."
+            },
+            {
+                sender: "Recursos Humanos &lt;rrhh@tu-empresa-oficial.com&gt;",
+                subject: "Asunto: Nuevo documento de políticas",
+                body: "Hola,<br><br>Por favor descarga el siguiente documento PDF que contiene la nueva política de vacaciones. Es obligatorio que todos lo lean hoy.<br><br>Adjunto: <span class='text-blue-400 underline cursor-pointer'>politicas_2024.exe</span>",
+                isPhishing: true,
+                explanation: "¡Peligro! Un documento de texto nunca debe terminar en '.exe' (ejecutable). Esto es un claro intento de instalar malware (virus) en tu dispositivo."
+            },
+            {
+                sender: "Google Security &lt;no-reply@accounts.google.com&gt;",
+                subject: "Asunto: Alerta de seguridad para tu cuenta",
+                body: "Se ha detectado un nuevo inicio de sesión en tu cuenta desde un dispositivo Windows en Madrid, España.<br><br>Si no fuiste tú, revisa la actividad de tu cuenta aquí:<br><a href='#' class='text-blue-400 underline' onclick='event.preventDefault();'>https://myaccount.google.com/notifications</a>",
+                isPhishing: false,
+                explanation: "Este correo es legítimo. El dominio del remitente es el oficial de Google ('@accounts.google.com') y el enlace dirige a una URL segura oficial (https://...google.com). Tampoco te pide la contraseña directamente en el correo."
+            }
+        ];
+
+        let currentQuizIndex = 0;
+
+        const elSender = document.getElementById('quizSender');
+        const elSubject = document.getElementById('quizSubject');
+        const elBody = document.getElementById('quizBody');
+        const elButtons = document.getElementById('quizButtons');
+        const elFeedback = document.getElementById('quizFeedback');
+        const elFeedTitle = document.getElementById('feedbackTitle');
+        const elFeedText = document.getElementById('feedbackText');
+
+        function loadQuiz() {
+            const data = quizData[currentQuizIndex];
+            elSender.innerHTML = data.sender;
+            elSubject.innerHTML = data.subject;
+            elBody.innerHTML = data.body;
+            
+            elButtons.classList.remove('hidden');
+            elFeedback.classList.add('hidden');
+        }
+
+        function answerQuiz(userGuessedPhishing) {
+            const data = quizData[currentQuizIndex];
+            const isCorrect = userGuessedPhishing === data.isPhishing;
+
+            elButtons.classList.add('hidden');
+            elFeedback.classList.remove('hidden');
+
+            if (isCorrect) {
+                elFeedback.className = 'mt-4 p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-100';
+                elFeedTitle.innerHTML = '<i class="fa-solid fa-circle-check text-green-400 mr-2"></i>¡Correcto!';
+            } else {
+                elFeedback.className = 'mt-4 p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-100';
+                elFeedTitle.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-400 mr-2"></i>Incorrecto, caíste en la trampa.';
+            }
+
+            elFeedText.innerHTML = data.explanation;
+        }
+
+        function nextQuiz() {
+            currentQuizIndex++;
+            if (currentQuizIndex >= quizData.length) {
+                // Reiniciar si llegó al final
+                currentQuizIndex = 0; 
+                alert("¡Has completado todos los casos! Volviendo a empezar...");
+            }
+            loadQuiz();
+        }
+
+        // Inicializar
+        loadQuiz();
+    </script>
+</body>
+</html>
